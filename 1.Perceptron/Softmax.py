@@ -10,4 +10,7 @@ def softmax(L):
 def softmax2(L):
     expL=np.exp(L)
     expLsum=sum(expL)
-    return expL/expLsum
+    result=[]
+    for i in expL:
+        result.append(i*1.0/expLsum)
+    return result
